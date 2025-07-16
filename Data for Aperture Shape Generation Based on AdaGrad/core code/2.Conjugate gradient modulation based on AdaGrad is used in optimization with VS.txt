@@ -1,0 +1,28 @@
+/*C code in VS*/
+bool AdaGrad(OptResMat * pRes, int icounts, int ilength, double * gkk, double * Gk_Gk, double * g)
+{
+	double dtemp1 = 0.0;
+	double dtemp2 = 0.0;
+	for (int i = 0; i < ilength; i++)
+	{
+		dtemp1 = g[i] * g[i];
+		Gk_Gk[i] += dtemp1;
+	}
+	if (icounts < pRes->iNumDirect)
+	{
+		for (int i = 0; i < ilength; i++)
+		{
+			gkk[i] = g[i];
+		}
+	}
+	else
+	{
+		for (int i = 0; i < ilength; i++)
+		{
+			dtemp2 = Gk_Gk[i]+EFCL;
+			dtemp1 = sqrt(dtemp2);
+			gkk[i] = g[i] / dtemp1;
+		}
+	}
+	return true;
+}

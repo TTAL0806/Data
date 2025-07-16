@@ -1,0 +1,4 @@
+As this study used cancer cases to simulate radiation, verbal informed consent was obtained, and clinical validation and interventional experiments were not involved.
+Restrictions apply to the availability of these data, which were used under license for this study. Therefore, these CT data is not convenient to upload.
+Data are available from the corresponding author with the permission of Shanxi Provincial Cancer Hospital and the Ethics Committee of the North University of China.
+You can contact us if you need cancer cases data.
